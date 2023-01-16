@@ -1,0 +1,11 @@
+file_format: "1"
+id: harold
+name: Harold
+type: shield
+url: https://www.github.com/Ayilay
+requires: [seeed_xiao]
+features:
+  - keys
+siblings:
+  - harold_left
+  - harold_right
