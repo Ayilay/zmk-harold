@@ -51,7 +51,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────╯
-                                  &mo NAV    &kp LSHIFT &kp LCTRL      &kp LALT   &kp SPACE  &mo SYM
+                                  &mo NAV    &kp LSHIFT &kp RET        &kp TAB    &kp SPACE  &mo SYM
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
