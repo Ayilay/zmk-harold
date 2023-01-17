@@ -67,8 +67,7 @@
             &kp ESC    &none      &kp LPAR   &kp RPAR   &kp BSLH       &kp STAR   &kp N4     &kp N5     &kp N6     &kp EQUAL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  `       │  - _     │  [ {     │  ] }     │          │   │  &       │  1       │  2       │  3       │  +       │
-            &kp GRAVE  &kp MINUS  &kp LBKT   &kp RBKT   &none          &kp A      &kp A      &kp A      &kp A      &kp A
-        //  &kp GRAVE  &kp MINUS  &kp LBKT   &kp RBKT   &none          &kp AMPER  &kp N1     &kp N2     &kp N3     &kp A
+            &kp GRAVE  &kp MINUS  &kp LBKT   &kp RBKT   &none          &kp AMPS   &kp N1     &kp N2     &kp N3     &kp PLUS
         //╰──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────╯
                                   &none      &none      &none          &none      &none      &none 
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
