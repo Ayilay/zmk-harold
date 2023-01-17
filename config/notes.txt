@@ -1,10 +1,11 @@
 Stuff to add/fix:
- - Quick language switching
  - Single/double quote
+ - Quick language switching
+ - Windows Explorer Nav
  - Close app
+ - Nice app switcher
  - Bootloader mode
  - Eradicate uncomfortable pinkie key?
- - Zero
  - More comfortable forward slash
  - Emojis?
  - Mouse Keys?
