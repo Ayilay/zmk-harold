@@ -1,0 +1,14 @@
+Stuff to add/fix:
+ - Quick language switching
+ - Single/double quote
+ - Close app
+ - Bootloader mode
+ - Eradicate uncomfortable pinkie key?
+ - Zero
+ - More comfortable forward slash
+ - Emojis?
+ - Mouse Keys?
+
+ Things that are nice:
+ - Ctrl + Alt mod-tap feels nice
+ - Alt-tab feels natural with mod-tab
