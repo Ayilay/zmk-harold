@@ -27,6 +27,13 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
+
+        tdc: td_caps {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_CAPS";
+            #binding-cells = <0>;
+            bindings = <&kp LSHIFT>, <&caps_word>;
+        };
     };
 
     conditional_layers {
@@ -78,13 +85,13 @@
         navig_layer {
             bindings = <
         //╭──────────┬────────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  Vol+      │  Ins     │  PgUp    │  Home    │   │          │          │ WOA what?│          │          │
-            &none      &kp C_VOL_UP  &kp INS   &kp PG_UP  &kp HOME       &none      &none      &kp K_APP  &none      &kp BSPC  
+        //│          │  Vol+      │  Ins     │  PgUp    │  Home    │   │          │          │          │          │          │
+            &none      &kp C_VOL_UP  &kp INS   &kp PG_UP  &kp HOME       &none      &none      &none      &none      &kp BSPC  
         //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  ESC     │  Vol-      │  Del     │  PgDn    │  End     │   │  LEFT    │  DOWN    │  UP      │  RIGHT   │          │
+        //│          │  Vol-      │  Del     │  PgDn    │  End     │   │  LEFT    │  DOWN    │  UP      │  RIGHT   │          │
             &none      &kp C_VOL_DN &kp DEL    &kp PG_DN  &kp END        &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none     
         //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  TAB     │            │          │          │          │   │          │          │  <       │  >       │          │
+        //│          │            │          │          │          │   │          │          │  <       │  >       │          │
             &none      &none        &none      &none      &none          &none      &none      &kp LT     &kp GT     &none     
         //╰──────────┴────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────╯
                                     &trans     &trans     &trans         &trans     &trans     &trans
