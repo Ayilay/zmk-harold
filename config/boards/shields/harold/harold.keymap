@@ -9,11 +9,28 @@
 #define HRML(k1,k2,k3) &ht LGUI  k1  &ht LALT k2  &ht LCTRL k3
 #define HRMR(k1,k2,k3) &ht RCTRL k1  &ht RALT k2  &ht RGUI  k3
 
+// Bluetooth Profile Selection shortcut
+#define BTSL(X)      &bt BT_SEL X
+
+// Windows Quit
+#define WQUIT        &kp LALT(F4)
+
 // Layer Mnemonics
 #define DEF   0   // Default
 #define SYM   1   // Symbols
 #define NAV   2   // Navigation + Media
-#define TRI   3   // Misc/Settings
+#define CFG   3   // Misc/Settings
+
+// Key positions (For combo keys etc)
+//  ╭────┬────┬────┬────┬────╮   ╭────┬────┬────┬────┬────╮
+//  │  0 │  1 │  2 │  3 │  4 │   │  5 │  6 │  7 │  8 │  9 │
+//  ├────┼────┼────┼────┼────┤   ├────┼────┼────┼────┼────┤
+//  │ 10 │ 11 │ 12 │ 13 │ 14 │   │ 15 │ 16 │ 17 │ 18 │ 19 │
+//  ├────┼────┼────┼────┼────┤   ├────┼────┼────┼────┼────┤
+//  │ 20 │ 21 │ 22 │ 23 │ 24 │   │ 25 │ 26 │ 27 │ 28 │ 29 │
+//  ╰────┴────┼────┼────┼────┤   ├────┼────┼────┼────┴────╯
+//            │ 30 │ 31 │ 32 │   │ 33 │ 34 │ 35 │
+//            ╰────┴────┴────╯   ╰────┴────┴────╯
 
 / {
     behaviors {
@@ -29,13 +46,13 @@
         };
     };
 
-    //conditional_layers {
-    //    compatible = "zmk,conditional-layers";
-    //    tri_layer {
-    //        if-layers = <1 2>;
-    //        then-layer = <3>;
-    //    };
-    //};
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <SYM NAV>;
+            then-layer = <CFG>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -61,10 +78,10 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  !       │  @       │  #       │  $       │  %       │   │  ^       │  7       │  8       │  9       │  0       │
-            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET  &kp N7     &kp N8     &kp N9     &kp BSPC
+            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET  &kp N7     &kp N8     &kp N9     &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  ESC     │  =       │  (       │  )       │   \ |    │   │  *       │  4       │  5       │  6       │  BKSP    │
-            &kp ESC    &kp EQUAL  &kp LPAR   &kp RPAR   &kp BSLH       &kp STAR   &kp N4     &kp N5     &kp N6     &kp N0
+        //│  ESC     │  =       │  (       │  )       │   \ |    │   │  *       │  4       │  5       │  6       │  ' "     │
+            &kp ESC    &kp EQUAL  &kp LPAR   &kp RPAR   &kp BSLH       &kp STAR   &kp N4     &kp N5     &kp N6     &kp SQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  `       │  - _     │  [ {     │  ] }     │          │   │  &       │  1       │  2       │  3       │  +       │
             &kp GRAVE  &kp MINUS  &kp LBKT   &kp RBKT   &none          &kp AMPS   &kp N1     &kp N2     &kp N3     &kp PLUS
@@ -77,35 +94,36 @@
         // NAV and Media
         navig_layer {
             bindings = <
-        //╭──────────┬────────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  Vol+      │  Ins     │  PgUp    │  Home    │   │          │          │ WOA what?│          │          │
-            &none      &kp C_VOL_UP  &kp INS   &kp PG_UP  &kp HOME       &none      &none      &kp K_APP  &none      &none     
-        //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  ESC     │  Vol-      │  Del     │  PgDn    │  End     │   │  LEFT    │  DOWN    │  UP      │  RIGHT   │          │
-            &none      &kp C_VOL_DN &kp DEL    &kp PG_DN  &kp END        &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none     
-        //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  TAB     │            │          │          │          │   │          │          │  <       │  >       │          │
-            &none      &none        &none      &none      &none          &none      &none      &kp LT     &kp GT     &none     
-        //╰──────────┴────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────╯
-                                    &trans     &trans     &trans         &trans     &trans     &trans
-        //                        ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
+        //╭──────────┬────────────┬──────────┬──────────┬──────────╮   ╭──────────┬───────────┬──────────┬──────────┬──────────╮
+        //│          │  Vol+      │  Ins     │  PgUp    │  Home    │   │          │ Bright+   │ Bright-  │          │  BKSPACE │
+            &none      &kp C_VOL_UP  &kp INS   &kp PG_UP  &kp HOME       &none      &kp C_BRI_UP &kp C_BRI_DN &none   &kp BSPC
+        //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼───────────┼──────────┼──────────┼──────────┤
+        //│          │  Vol-      │  Del     │  PgDn    │  End     │   │  LEFT    │  DOWN     │  UP      │  RIGHT   │          │
+            &none      &kp C_VOL_DN &kp DEL    &kp PG_DN  &kp END        &kp LEFT   &kp DOWN    &kp UP     &kp RIGHT  &none     
+        //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼───────────┼──────────┼──────────┼──────────┤
+        //│          │            │          │          │          │   │          │           │          │          │          │
+            &none      &none        &none      &none      WQUIT          &none      &none       &none      &none      &none     
+        //╰──────────┴────────────┼──────────┼──────────┼──────────┤   ├──────────┼───────────┼──────────┼──────────┴──────────╯
+                                    &trans     &trans     &trans         &trans     &trans      &trans
+        //                        ╰──────────┴──────────┴──────────╯   ╰──────────┴───────────┴──────────╯
             >;
         };
 
-        tri_layer {
+        // CFG layer
+        config_layer {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │          │          │   │          │          │          │          │          │
-            &none      &none      &none      &none      &none          &none      &none      &none      &none      &none     
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │          │          │          │          │
-            &none      &none      &none      &none      &none          &none      &none      &none      &none      &none     
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │          │          │          │          │
-            &none      &none      &none      &none      &none          &none      &none      &none      &none      &none     
-        //╰──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────╯
-                                  &none      &none      &none          &none      &none      &none
-        //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
+        //╭──────────┬────────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│          │            │          │          │          │   │          │          │          │          │          │
+            &bootloader &none        &none      &none      &none          &none      &none      &none      &none      &bootloader
+        //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │            │          │          │          │   │          │          │          │          │          │
+            &reset     &none        &none      &none      &none          &none      BTSL(3)    BTSL(4)    &bt BT_CLR &reset
+        //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │            │          │          │          │   │          │          │          │          │          │
+            &none      &none        &none      &none      &none          &none      BTSL(0)     BTSL(1)   BTSL(2)
+        //╰──────────┴────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────╯
+                                    &trans     &trans     &trans         &trans     &trans     &trans
+        //                        ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
     };
