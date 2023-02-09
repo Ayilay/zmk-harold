@@ -12,8 +12,9 @@
 // Bluetooth Profile Selection shortcut
 #define BTSL(X)      &bt BT_SEL X
 
-// Windows Quit
-#define WQUIT        &kp LA(F4)
+// Some handy aliases
+#define WQUIT        LA(F4)     // Windows Quit
+#define TMUX_MOD     LC(SPACE)  // TMUX Modifier
 
 // Layer Mnemonics
 #define DEF   0   // Default
@@ -38,11 +39,28 @@
             label = "hold_tap";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             tapping-term-ms = <350>;
             quick-tap-ms = <150>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
+        };
+
+        // TODO change this into some macro that sends
+        // the tmux mode code (Ctrl+Spc) if it tap-held
+        // for every subsequent key pressed
+        td_tm: tmux_modifier {
+            label = "tmux-tap-dance";
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&mo NAV>, <&kp TMUX_MOD>;
+        };
+
+        td_cw: caps_word {
+            label = "capsword-tap-dance";
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&kp LSHIFT>, <&caps_word>;
         };
     };
 
@@ -68,7 +86,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────╯
-                                  &mo NAV    &kp LSHIFT &kp TAB        &kp RET    &kp SPACE  &mo SYM
+                                  &td_tm     &td_cw     &kp TAB        &kp RET    &kp SPACE  &mo SYM
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
@@ -114,7 +132,7 @@
             bindings = <
         //╭──────────┬────────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │            │          │          │          │   │          │          │          │          │          │
-            &bootloader &none       &none      WQUIT       &none        &none      &none      &none      &none      &bootloader
+            &bootloader &none       &none      &kp WQUIT   &none        &none      &none      &none      &none      &bootloader
         //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │            │          │          │          │   │          │          │          │          │          │
             &reset     &none        &none      &none      &none          &none      BTSL(3)    BTSL(4)    &bt BT_CLR &reset
