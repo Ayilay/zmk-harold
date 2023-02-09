@@ -13,7 +13,7 @@
 #define BTSL(X)      &bt BT_SEL X
 
 // Windows Quit
-#define WQUIT        &kp LALT(F4)
+#define WQUIT        &kp LA(F4)
 
 // Layer Mnemonics
 #define DEF   0   // Default
@@ -38,7 +38,7 @@
             label = "hold_tap";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "hold-preferred";
             tapping-term-ms = <350>;
             quick-tap-ms = <150>;
             global-quick-tap;
@@ -102,7 +102,7 @@
             &none      &kp C_VOL_DN &kp DEL    &kp PG_DN  &kp END        &kp LEFT   &kp DOWN    &kp UP     &kp RIGHT  &none     
         //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼───────────┼──────────┼──────────┼──────────┤
         //│          │            │          │          │          │   │          │           │          │          │          │
-            &none      &none        &none      &none      WQUIT          &none      &none       &none      &none      &none     
+            &none      &none        &none      &none      &none          &none      &none       &none      &none      &none     
         //╰──────────┴────────────┼──────────┼──────────┼──────────┤   ├──────────┼───────────┼──────────┼──────────┴──────────╯
                                     &trans     &trans     &trans         &trans     &trans      &trans
         //                        ╰──────────┴──────────┴──────────╯   ╰──────────┴───────────┴──────────╯
@@ -114,7 +114,7 @@
             bindings = <
         //╭──────────┬────────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │            │          │          │          │   │          │          │          │          │          │
-            &bootloader &none       &none      &kp LALT(F4)  &none        &none      &none      &none      &none      &bootloader
+            &bootloader &none       &none      WQUIT       &none        &none      &none      &none      &none      &bootloader
         //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │            │          │          │          │   │          │          │          │          │          │
             &reset     &none        &none      &none      &none          &none      BTSL(3)    BTSL(4)    &bt BT_CLR &reset
