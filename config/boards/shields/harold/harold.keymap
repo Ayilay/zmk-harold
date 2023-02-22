@@ -6,8 +6,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 // Home row mods macro
-#define HRML(k1,k2,k3) &ht LGUI  k1  &ht LALT k2  &ht LCTRL k3
-#define HRMR(k1,k2,k3) &ht RCTRL k1  &ht RALT k2  &ht RGUI  k3
+#define HRML(k1,k2,k3) &htwin LGUI  k1  &ht LALT k2  &ht    LCTRL k3
+#define HRMR(k1,k2,k3) &ht    RCTRL k1  &ht RALT k2  &htwin RGUI  k3
 
 // Bluetooth Profile Selection shortcut
 #define BTSL(X)      &bt BT_SEL X
@@ -21,6 +21,7 @@
 #define SYM   1   // Symbols
 #define NAV   2   // Navigation + Media
 #define CFG   3   // Misc/Settings
+#define GM1   4   // Gaming 1
 
 // Key positions (For combo keys etc)
 //  ╭────┬────┬────┬────┬────╮   ╭────┬────┬────┬────┬────╮
@@ -34,6 +35,15 @@
 //            ╰────┴────┴────╯   ╰────┴────┴────╯
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_game1 {
+            timeout-ms = <50>;
+            key-positions = <34 35>;
+            bindings = <&to GM1>;
+        };
+    };
+
     behaviors {
         ht: hold_tap {
             label = "hold_tap";
@@ -42,6 +52,21 @@
             flavor = "balanced";
             tapping-term-ms = <350>;
             quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
+        };
+
+
+        // Slower hold-tap for the windows key because it keeps triggering
+        // So annoying ...
+        htwin: hold_tap_win {
+            label = "hold_tap_win";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+
+            tapping-term-ms = <500>;
+            quick-tap-ms = <300>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
@@ -74,6 +99,7 @@
 
     keymap {
         compatible = "zmk,keymap";
+        // Layer 0
         default_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -91,15 +117,15 @@
             >;
         };
 
-        // SYM
+        // Layer 1: SYM
         symbol_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  !       │  @       │  #       │  $       │  %       │   │  ^       │  7       │  8       │  9       │  0       │
             &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET  &kp N7     &kp N8     &kp N9     &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  ESC     │  =       │  (       │  )       │   \ |    │   │  *       │  4       │  5       │  6       │  ' "     │
-            &kp ESC    &kp EQUAL  &kp LPAR   &kp RPAR   &kp BSLH       &kp STAR   &kp N4     &kp N5     &kp N6     &kp SQT
+        //│  TODO    │  =       │  (       │  )       │   \ |    │   │  *       │  4       │  5       │  6       │  ' "     │
+            &none      &kp EQUAL  &kp LPAR   &kp RPAR   &kp BSLH       &kp STAR   &kp N4     &kp N5     &kp N6     &kp SQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  `       │  - _     │  [ {     │  ] }     │          │   │  &       │  1       │  2       │  3       │  +       │
             &kp GRAVE  &kp MINUS  &kp LBKT   &kp RBKT   &none          &kp AMPS   &kp N1     &kp N2     &kp N3     &kp PLUS
@@ -109,15 +135,15 @@
             >;
         };
 
-        // NAV and Media
+        // Layer 2: NAV and Media
         navig_layer {
             bindings = <
         //╭──────────┬────────────┬──────────┬──────────┬──────────╮   ╭──────────┬───────────┬──────────┬──────────┬──────────╮
         //│          │  Vol+      │  Ins     │  PgUp    │  Home    │   │          │ Bright+   │ Bright-  │          │  BKSPACE │
             &none      &kp C_VOL_UP  &kp INS   &kp PG_UP  &kp HOME       &none      &kp C_BRI_UP &kp C_BRI_DN &none   &kp BSPC
         //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼───────────┼──────────┼──────────┼──────────┤
-        //│          │  Vol-      │  Del     │  PgDn    │  End     │   │  LEFT    │  DOWN     │  UP      │  RIGHT   │          │
-            &none      &kp C_VOL_DN &kp DEL    &kp PG_DN  &kp END        &kp LEFT   &kp DOWN    &kp UP     &kp RIGHT  &none     
+        //│  ESC     │  Vol-      │  Del     │  PgDn    │  End     │   │  LEFT    │  DOWN     │  UP      │  RIGHT   │          │
+            &kp ESC    &kp C_VOL_DN &kp DEL    &kp PG_DN  &kp END        &kp LEFT   &kp DOWN    &kp UP     &kp RIGHT  &none     
         //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼───────────┼──────────┼──────────┼──────────┤
         //│          │            │          │          │          │   │          │           │          │          │          │
             &none      &none        &none      &none      &none          &none      &none       &none      &none      &none     
@@ -127,7 +153,7 @@
             >;
         };
 
-        // CFG layer
+        // Layer 3: CFG layer
         config_layer {
             bindings = <
         //╭──────────┬────────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -141,6 +167,24 @@
             &none      &none        &none      &none      &none          &none      BTSL(0)     BTSL(1)   BTSL(2)
         //╰──────────┴────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────╯
                                     &trans     &trans     &trans         &trans     &trans     &trans
+        //                        ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
+            >;
+        };
+
+        // Layer 4: GM1 (Gaming 1) Layer
+        game1_layer {
+            bindings = <
+        //╭──────────┬────────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│          │            │          │          │          │   │          │          │          │          │          │
+            &kp A      &kp W        &trans     &trans     &trans         &trans     &trans     &kp UP     &trans     &trans
+        //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │            │          │          │          │   │          │          │          │          │          │
+            &kp Q      &kp S        &kp D      &trans     &trans         &trans     &kp LEFT   &kp DOWN   &kp RIGHT     &trans
+        //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │            │          │          │          │   │          │          │          │          │          │
+            &trans     &trans       &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+        //╰──────────┴────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────╯
+                                    &trans     &trans     &trans         &to DEF    &trans     &trans
         //                        ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
