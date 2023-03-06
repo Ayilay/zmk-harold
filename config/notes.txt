@@ -1,5 +1,6 @@
 Stuff to add/fix:
  - Quick language switching
+ - CAD shortcuts (numbers on left, ILNP keys)
  - Max/Min windows, better Tab
  - Eradicate uncomfortable pinkie key?
  - More comfortable forward slash
