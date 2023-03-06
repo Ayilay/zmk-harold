@@ -22,3 +22,6 @@ west build -d build/right -b seeeduino_xiao_ble -- -DSHIELD=harold_right -DZMK_C
 cd $localdir
 cp ${zmkbuild}/right/zephyr/zmk.uf2 ./builds/harold_right.uf2
 cp ${zmkbuild}/left/zephyr/zmk.uf2 ./builds/harold_left.uf2
+
+echo ""
+echo "Finished building Harold, harold_left/right.uf2 files are in ./builds/"
