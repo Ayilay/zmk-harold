@@ -15,6 +15,18 @@ zmkconf="/home/ayilay/downloads/zmk-harold/config"
 zmkapp="/home/ayilay/downloads/zmk/app"
 zmkbuild="${zmkapp}/build"
 
+#------------------------------------------------------------
+# Error Checking
+#------------------------------------------------------------
+
+[ -d "$zmkconf"  ] || { echo "zmk conf dir ${zmkconf} (for keyboard config) does not exist"; exit 1; }
+[ -d "$zmkapp"   ] || { echo "zmk app dir ${zmkapp} does not exist"; exit 1; }
+[ -d "$zmkbuild" ] || { echo "build dir ${zmkbuild} does not exist, please make it within ${zmkconf}"; exit 1; }
+
+#------------------------------------------------------------
+# The Fun Stuff
+#------------------------------------------------------------
+
 cd $zmkapp
 west build -d build/left -b seeeduino_xiao_ble  -o=-j10 -- -DSHIELD=harold_left -DZMK_CONFIG=$zmkconf
 west build -d build/right -b seeeduino_xiao_ble -o=-j10 -- -DSHIELD=harold_right -DZMK_CONFIG=$zmkconf
