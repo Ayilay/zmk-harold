@@ -16,8 +16,8 @@ zmkapp="/home/ayilay/downloads/zmk/app"
 zmkbuild="${zmkapp}/build"
 
 cd $zmkapp
-west build -d build/left -b seeeduino_xiao_ble -- -DSHIELD=harold_left -DZMK_CONFIG=$zmkconf
-west build -d build/right -b seeeduino_xiao_ble -- -DSHIELD=harold_right -DZMK_CONFIG=$zmkconf
+west build -d build/left -b seeeduino_xiao_ble  -o=-j10 -- -DSHIELD=harold_left -DZMK_CONFIG=$zmkconf
+west build -d build/right -b seeeduino_xiao_ble -o=-j10 -- -DSHIELD=harold_right -DZMK_CONFIG=$zmkconf
 
 cd $localdir
 cp ${zmkbuild}/right/zephyr/zmk.uf2 ./builds/harold_right.uf2

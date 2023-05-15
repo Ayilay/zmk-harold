@@ -2,8 +2,8 @@ file_format: "1"
 id: harold
 name: Harold
 type: shield
-url: https://www.github.com/Ayilay
-requires: [seeed_xiao]
+url: https://www.github.com/Ayilay/zmk-config
+requires: [seeeduino_xiao_ble]
 features:
   - keys
 siblings:

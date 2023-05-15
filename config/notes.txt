@@ -1,7 +1,10 @@
 Stuff to add/fix:
+ - Single/double quote
  - Quick language switching
- - CAD shortcuts (numbers on left, ILNP keys)
- - Max/Min windows, better Tab
+ - Windows Explorer Nav
+ - Close app
+ - Nice app switcher
+ - Bootloader mode
  - Eradicate uncomfortable pinkie key?
  - More comfortable forward slash
  - Emojis?
