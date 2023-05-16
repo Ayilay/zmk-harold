@@ -22,6 +22,10 @@
 #define NAV   2   // Navigation + Media
 #define CFG   3   // Misc/Settings
 #define GM1   4   // Gaming 1
+#define GM1S  5   // Gaming 1 Super-Layer
+#define EMOJ  6   // Emoji Layer, ONE-Shot. TODO UNICODE NOT SUPPORTED yet
+
+// Emoji Key Defines
 
 // Key positions (For combo keys etc)
 //  ╭────┬────┬────┬────┬────╮   ╭────┬────┬────┬────┬────╮
@@ -161,7 +165,7 @@
             &bootloader &none       &none      &kp WQUIT   &none        &none      &none      &none      &none      &bootloader
         //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │            │          │          │          │   │          │          │          │          │          │
-            &reset     &none        &none      &none      &none          &none      BTSL(3)    BTSL(4)    &bt BT_CLR &reset
+            &reset     &to GM1      &none      &none      &none          &none      BTSL(3)    BTSL(4)    &bt BT_CLR &reset
         //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │            │          │          │          │   │          │          │          │          │          │
             &none      &none        &none      &none      &none          &none      BTSL(0)     BTSL(1)   BTSL(2)
@@ -171,43 +175,46 @@
             >;
         };
 
-        // Layer 4: GM1 (Gaming 1) Layer
+        // Layer 4: GM1 (Gaming 1) Layer.
+        //   It's QWERTY but shifted 1 to the right and includes TAB, Shift, and Ctrl keys
         game1_layer {
             bindings = <
-        //╭──────────┬────────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │            │          │          │          │   │          │          │          │          │          │
-            &kp A      &kp W        &trans     &trans     &trans         &trans     &trans     &kp UP     &trans     &trans
-        //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │            │          │          │          │   │          │          │          │          │          │
-            &kp Q      &kp S        &kp D      &trans     &trans         &trans     &kp LEFT   &kp DOWN   &kp RIGHT     &trans
-        //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │            │          │          │          │   │          │          │          │          │          │
-            &trans     &trans       &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
-        //╰──────────┴────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────╯
-                                    &trans     &trans     &trans         &to DEF    &trans     &trans
+        //╭────────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│   TAB      │ Q        │  W       │  E       │  R       │   │  Y       │  U       │  I       │  O       │  P       │
+            &kp TAB     &kp Q       &kp W      &kp E      &kp R          &kp Y      &kp U      &kp I      &kp O      &kp P
+        //├────────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  SHIFT     │ A        │  S       │  D       │  F       │   │  H       │  J       │  K       │  L       │ ; :      │
+            &kp LSHIFT  &kp A       &kp S      &kp D      &kp F          &kp H      &kp J      &kp K      &kp L      &kp SEMI
+        //├────────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  CTRL      │ Z        │  X       │  C       │  V       │   │  N       │  M       │ , <      │ . >      │ / ?      │
+            &kp LCTRL   &kp Z       &kp X      &kp C      &kp V          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
+        //╰────────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────╯
+                                    &mo GM1S   &kp SPC    &none          &to DEF    &none      &none
         //                        ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
 
-        // Layer 5: TBD
+        // Layer 5: GM1S Gaming 1 Super-Layer
+        //   Enables extra keys while within GM1 layer
+        //   i.e. Number Keys, T/G/B keys etc
         layer5 {
             bindings = <
         //╭──────────┬────────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │            │          │          │          │   │          │          │          │          │          │
-            &trans     &trans       &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+        //│          │      1     │      2   │      3   │     T    │   │          │          │          │          │          │
+            &none      &kp N1       &kp N2     &kp N3     &kp T          &trans     &trans     &trans     &trans     &trans
         //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │            │          │          │          │   │          │          │          │          │          │
-            &trans     &trans       &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+        //│          │            │          │          │     G    │   │          │          │          │          │          │
+            &kp ESC    &trans       &trans     &trans     &kp G          &trans     &trans     &trans     &trans     &trans
         //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │            │          │          │          │   │          │          │          │          │          │
-            &trans     &trans       &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+        //│          │            │          │          │     B    │   │          │          │          │          │          │
+            &trans     &trans       &trans     &trans     &kp B          &trans     &trans     &trans     &trans     &trans
         //╰──────────┴────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────╯
-                                    &trans     &trans     &trans         &trans     &trans     &trans
+                                    &none      &trans     &trans         &to DEF    &trans     &trans
         //                        ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
 
-        // Layer 6: TBD
+        // Layer 6: EMOJ Emoji Layer (One-Shot)
         layer6 {
             bindings = <
         //╭──────────┬────────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -220,7 +227,7 @@
         //│          │            │          │          │          │   │          │          │          │          │          │
             &trans     &trans       &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────╯
-                                    &trans     &trans     &trans         &trans     &trans     &trans
+                                    &trans     &trans     &trans         &to DEF    &trans     &trans
         //                        ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
@@ -238,7 +245,7 @@
         //│          │            │          │          │          │   │          │          │          │          │          │
             &trans     &trans       &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────╯
-                                    &trans     &trans     &trans         &trans     &trans     &trans
+                                    &trans     &trans     &trans         &to DEF    &trans     &trans
         //                        ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
