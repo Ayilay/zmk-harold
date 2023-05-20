@@ -165,7 +165,7 @@
             &bootloader &none       &none      &kp WQUIT   &none        &none      &none      &none      &none      &bootloader
         //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │            │          │          │          │   │          │          │          │          │          │
-            &reset     &to GM1      &none      &none      &none          &none      BTSL(3)    BTSL(4)    &bt BT_CLR &reset
+            &none      &to GM1      &none      &none      &none          &none      BTSL(3)    BTSL(4)    &bt BT_CLR &none
         //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │            │          │          │          │   │          │          │          │          │          │
             &none      &none        &none      &none      &none          &none      BTSL(0)     BTSL(1)   BTSL(2)
@@ -189,7 +189,7 @@
         //│  CTRL      │ Z        │  X       │  C       │  V       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp LCTRL   &kp Z       &kp X      &kp C      &kp V          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰────────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────╯
-                                    &mo GM1S   &kp SPC    &none          &to DEF    &none      &none
+                                    &mo GM1S   &kp SPC    &none          &to DEF    &kp SPC    &none
         //                        ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
