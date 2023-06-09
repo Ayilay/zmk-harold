@@ -25,7 +25,7 @@
 #define CFG   3   // Misc/Settings
 #define GM1   4   // Gaming 1
 #define GM1S  5   // Gaming 1 Super-Layer
-#define EMOJ  6   // Emoji Layer, ONE-Shot. TODO UNICODE NOT SUPPORTED yet
+#define FKEY  6   // F-Key layer, OneShot w/ Sticky Keys
 
 // Emoji Key Defines
 
@@ -169,7 +169,7 @@
             &bootloader &none       &none      &kp WQUIT   &none        &none      &none      &none      &none      &bootloader
         //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │            │          │          │          │   │          │          │          │          │          │
-            &none      &to GM1      &none      &none      &none          &none      BTSL(3)    BTSL(4)    &bt BT_CLR &none
+            &none      &to GM1      &sl FKEY   &none      &none          &none      BTSL(3)    BTSL(4)    &bt BT_CLR &none
         //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │            │          │          │          │   │          │          │          │          │          │
             &none      &none        &none      &none      &none          &none      BTSL(0)     BTSL(1)   BTSL(2)
@@ -207,29 +207,31 @@
         //│          │      1     │      2   │      3   │     T    │   │          │          │          │          │          │
             &none      &kp N1       &kp N2     &kp N3     &kp T          &trans     &trans     &trans     &trans     &trans
         //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │            │          │          │     G    │   │          │          │          │          │          │
-            &kp ESC    &trans       &trans     &trans     &kp G          &trans     &trans     &trans     &trans     &trans
+        //│          │      4     │      5   │      6   │     G    │   │          │          │          │          │          │
+            &kp ESC    &kp N4       &kp N5     &kp N6     &kp G          &trans     &trans     &trans     &trans     &trans
         //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │            │          │          │     B    │   │          │          │          │          │          │
-            &trans     &trans       &trans     &trans     &kp B          &trans     &trans     &trans     &trans     &trans
+        //│      0   │      7     │      8   │      9   │     B    │   │          │          │          │          │          │
+            &kp N0     &kp N7       &kp N8     &kp N9     &kp B          &trans     &trans     &trans     &trans     &trans
         //╰──────────┴────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────╯
                                     &none      &trans     &trans         &to DEF    &trans     &trans
         //                        ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
 
-        // Layer 6: EMOJ Emoji Layer (One-Shot)
+        // Layer 6: FKEY Layer (One-Shot)
+        //          At the moment, F-Keys CANNOT be combined with other combinations ...
+        //          Maybe I'll fix the keymap to support that eventually
         layer6 {
             bindings = <
         //╭──────────┬────────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │            │          │          │          │   │          │          │          │          │          │
-            &trans     &trans       &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+        //│          │            │          │          │          │   │          │  F7      │  F8      │  F9      │  F10     │
+            &trans     &trans       &trans     &trans     &trans         &trans     &kp F7     &kp F8     &kp F9     &kp F10
         //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │            │          │          │          │   │          │          │          │          │          │
-            &trans     &trans       &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+        //│          │            │          │          │          │   │          │  F4      │  F5      │  F6      │  F11     │
+            &trans     &trans       &trans     &trans     &trans         &trans     &kp F4     &kp F5     &kp F6     &kp F11
         //├──────────┼────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │            │          │          │          │   │          │          │          │          │          │
-            &trans     &trans       &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+        //│          │            │          │          │          │   │          │  F1      │  F2      │  F3      │  F12     │
+            &trans     &trans       &trans     &trans     &trans         &trans     &kp F1     &kp F2     &kp F3     &kp F12
         //╰──────────┴────────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────╯
                                     &trans     &trans     &trans         &to DEF    &trans     &trans
         //                        ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯

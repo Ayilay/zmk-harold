@@ -42,3 +42,6 @@ cp ${zmkbuild}/right/zephyr/zmk.uf2 ./builds/harold_right.uf2
 
 echo ""
 echo "Finished building Harold, harold_left/right.uf2 files are in ./builds/"
+
+cp ./builds/* ~ayilay/winAyilay/Downloads
+echo "Copied build/ files to Windows partition"
