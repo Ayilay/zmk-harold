@@ -184,11 +184,11 @@
         game1_layer {
             bindings = <
         //╭────────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│   TAB      │ Q        │  W       │  E       │  R       │   │  Y       │  U       │  I       │  O       │  P       │
-            &kp TAB     &kp Q       &kp W      &kp E      &kp R          &kp Y      &kp U      &kp I      &kp O      &kp P
+        //│   TAB      │ Q        │  W       │  E       │  R       │   │  Y       │  U       │  UP      │  O       │  P       │
+            &kp TAB     &kp Q       &kp W      &kp E      &kp R          &kp Y      &kp U      &kp UP     &kp O      &kp P
         //├────────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  SHIFT     │ A        │  S       │  D       │  F       │   │  H       │  J       │  K       │  L       │ ; :      │
-            &kp LSHIFT  &kp A       &kp S      &kp D      &kp F          &kp H      &kp J      &kp K      &kp L      &kp SEMI
+        //│  SHIFT     │ A        │  S       │  D       │  F       │   │  H       │  LEFT    │  DOWN    │  RIGHT   │ ; :      │
+            &kp LSHIFT  &kp A       &kp S      &kp D      &kp F          &kp H      &kp LEFT   &kp DOWN   &kp RIGHT  &kp SEMI
         //├────────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  CTRL      │ Z        │  X       │  C       │  V       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp LCTRL   &kp Z       &kp X      &kp C      &kp V          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
