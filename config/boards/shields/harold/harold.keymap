@@ -132,11 +132,11 @@
         //│  !       │  @       │  #       │  $       │  %       │   │  ^       │  7       │  8       │  9       │  0       │
             &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET  &kp N7     &kp N8     &kp N9     &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  TODO    │  =       │  (       │  )       │   \ |    │   │  *       │  4       │  5       │  6       │  ' "     │
-            &none      &kp EQUAL  &kp LPAR   &kp RPAR   &kp BSLH       &kp STAR   &kp N4     &kp N5     &kp N6     &kp SQT
+        //│  `/~     │  =       │  (       │  )       │   \ |    │   │  *       │  4       │  5       │  6       │  ' "     │
+            &kp GRAVE  &kp EQUAL  &kp LPAR   &kp RPAR   &kp BSLH       &kp STAR   &kp N4     &kp N5     &kp N6     &kp SQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  `       │  - _     │  [ {     │  ] }     │          │   │  &       │  1       │  2       │  3       │  +       │
-            &kp GRAVE  &kp MINUS  &kp LBKT   &kp RBKT   &none          &kp AMPS   &kp N1     &kp N2     &kp N3     &kp PLUS
+        //│  (blank) │  - _     │  [ {     │  ] }     │          │   │  &       │  1       │  2       │  3       │  +       │
+            &none      &kp MINUS  &kp LBKT   &kp RBKT   &none          &kp AMPS   &kp N1     &kp N2     &kp N3     &kp PLUS
         //╰──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────╯
                                   &trans     &trans     &trans         &trans     &trans     &trans
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
