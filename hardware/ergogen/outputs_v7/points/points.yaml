@@ -1,0 +1,805 @@
+matrix_pinky_bottom:
+    x: 0
+    'y': 0
+    r: 5
+    meta:
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        padding: 19.05
+        width: 1
+        height: 1
+        skip: false
+        asym: both
+        footprints:
+            mx_hotswap:
+                type: mx
+                nets:
+                    from: '=colrow'
+                    to: '=colnet'
+                params:
+                    reverse: true
+                    hotswap: true
+                    keycaps: false
+            diode:
+                type: diode
+                nets:
+                    from: '=colrow'
+                    to: '=rownet'
+                anchor:
+                    shift:
+                        - 0
+                        - -5
+        colnet: COL_Pink
+        rownet: ROW_Bot
+        name: matrix_pinky_bottom
+        colrow: pinky_bottom
+        col: &ref_0
+            rotate: 5
+            key:
+                colnet: COL_Pink
+            stagger: 0
+            spread: 0
+            origin:
+                - 0
+                - 0
+            rows: {}
+            name: pinky
+        row: bottom
+matrix_pinky_home:
+    x: -1.6603169
+    'y': 18.977509
+    r: 5
+    meta:
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        padding: 19.05
+        width: 1
+        height: 1
+        skip: false
+        asym: both
+        footprints:
+            mx_hotswap:
+                type: mx
+                nets:
+                    from: '=colrow'
+                    to: '=colnet'
+                params:
+                    reverse: true
+                    hotswap: true
+                    keycaps: false
+            diode:
+                type: diode
+                nets:
+                    from: '=colrow'
+                    to: '=rownet'
+                anchor:
+                    shift:
+                        - 0
+                        - -5
+        colnet: COL_Pink
+        rownet: ROW_Home
+        name: matrix_pinky_home
+        colrow: pinky_home
+        col: *ref_0
+        row: home
+matrix_pinky_top:
+    x: -3.3206338
+    'y': 37.955018
+    r: 5
+    meta:
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        padding: 19.05
+        width: 1
+        height: 1
+        skip: false
+        asym: both
+        footprints:
+            mx_hotswap:
+                type: mx
+                nets:
+                    from: '=colrow'
+                    to: '=colnet'
+                params:
+                    reverse: true
+                    hotswap: true
+                    keycaps: false
+            diode:
+                type: diode
+                nets:
+                    from: '=colrow'
+                    to: '=rownet'
+                anchor:
+                    shift:
+                        - 0
+                        - -5
+        colnet: COL_Pink
+        rownet: ROW_Top
+        name: matrix_pinky_top
+        colrow: pinky_top
+        col: *ref_0
+        row: top
+matrix_ring_bottom:
+    x: 18.0860318
+    'y': 19.8833141
+    r: 0
+    meta:
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        padding: 19.05
+        width: 1
+        height: 1
+        skip: false
+        asym: both
+        footprints:
+            mx_hotswap:
+                type: mx
+                nets:
+                    from: '=colrow'
+                    to: '=colnet'
+                params:
+                    reverse: true
+                    hotswap: true
+                    keycaps: false
+            diode:
+                type: diode
+                nets:
+                    from: '=colrow'
+                    to: '=rownet'
+                anchor:
+                    shift:
+                        - 0
+                        - -5
+        colnet: COL_Ring
+        rownet: ROW_Bot
+        name: matrix_ring_bottom
+        colrow: ring_bottom
+        col: &ref_1
+            rotate: -5
+            origin:
+                - -9
+                - -9
+            stagger: 19.05
+            spread: 19
+            key:
+                colnet: COL_Ring
+            rows: {}
+            name: ring
+        row: bottom
+matrix_ring_home:
+    x: 18.0860318
+    'y': 38.933314100000004
+    r: 0
+    meta:
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        padding: 19.05
+        width: 1
+        height: 1
+        skip: false
+        asym: both
+        footprints:
+            mx_hotswap:
+                type: mx
+                nets:
+                    from: '=colrow'
+                    to: '=colnet'
+                params:
+                    reverse: true
+                    hotswap: true
+                    keycaps: false
+            diode:
+                type: diode
+                nets:
+                    from: '=colrow'
+                    to: '=rownet'
+                anchor:
+                    shift:
+                        - 0
+                        - -5
+        colnet: COL_Ring
+        rownet: ROW_Home
+        name: matrix_ring_home
+        colrow: ring_home
+        col: *ref_1
+        row: home
+matrix_ring_top:
+    x: 18.0860318
+    'y': 57.9833141
+    r: 0
+    meta:
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        padding: 19.05
+        width: 1
+        height: 1
+        skip: false
+        asym: both
+        footprints:
+            mx_hotswap:
+                type: mx
+                nets:
+                    from: '=colrow'
+                    to: '=colnet'
+                params:
+                    reverse: true
+                    hotswap: true
+                    keycaps: false
+            diode:
+                type: diode
+                nets:
+                    from: '=colrow'
+                    to: '=rownet'
+                anchor:
+                    shift:
+                        - 0
+                        - -5
+        colnet: COL_Ring
+        rownet: ROW_Top
+        name: matrix_ring_top
+        colrow: ring_top
+        col: *ref_1
+        row: top
+matrix_middle_bottom:
+    x: 37.0860317
+    'y': 28.4558142
+    r: 0
+    meta:
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        padding: 19.05
+        width: 1
+        height: 1
+        skip: false
+        asym: both
+        footprints:
+            mx_hotswap:
+                type: mx
+                nets:
+                    from: '=colrow'
+                    to: '=colnet'
+                params:
+                    reverse: true
+                    hotswap: true
+                    keycaps: false
+            diode:
+                type: diode
+                nets:
+                    from: '=colrow'
+                    to: '=rownet'
+                anchor:
+                    shift:
+                        - 0
+                        - -5
+        colnet: COL_Midd
+        rownet: ROW_Bot
+        name: matrix_middle_bottom
+        colrow: middle_bottom
+        col: &ref_2
+            stagger: 8.5725
+            key:
+                colnet: COL_Midd
+            spread: 19
+            rotate: 0
+            origin:
+                - 0
+                - 0
+            rows: {}
+            name: middle
+        row: bottom
+matrix_middle_home:
+    x: 37.0860317
+    'y': 47.5058142
+    r: 0
+    meta:
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        padding: 19.05
+        width: 1
+        height: 1
+        skip: false
+        asym: both
+        footprints:
+            mx_hotswap:
+                type: mx
+                nets:
+                    from: '=colrow'
+                    to: '=colnet'
+                params:
+                    reverse: true
+                    hotswap: true
+                    keycaps: false
+            diode:
+                type: diode
+                nets:
+                    from: '=colrow'
+                    to: '=rownet'
+                anchor:
+                    shift:
+                        - 0
+                        - -5
+        colnet: COL_Midd
+        rownet: ROW_Home
+        name: matrix_middle_home
+        colrow: middle_home
+        col: *ref_2
+        row: home
+matrix_middle_top:
+    x: 37.0860317
+    'y': 66.5558142
+    r: 0
+    meta:
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        padding: 19.05
+        width: 1
+        height: 1
+        skip: false
+        asym: both
+        footprints:
+            mx_hotswap:
+                type: mx
+                nets:
+                    from: '=colrow'
+                    to: '=colnet'
+                params:
+                    reverse: true
+                    hotswap: true
+                    keycaps: false
+            diode:
+                type: diode
+                nets:
+                    from: '=colrow'
+                    to: '=rownet'
+                anchor:
+                    shift:
+                        - 0
+                        - -5
+        colnet: COL_Midd
+        rownet: ROW_Top
+        name: matrix_middle_top
+        colrow: middle_top
+        col: *ref_2
+        row: top
+matrix_index_bottom:
+    x: 56.0860318
+    'y': 19.8833141
+    r: 0
+    meta:
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        padding: 19.05
+        width: 1
+        height: 1
+        skip: false
+        asym: both
+        footprints:
+            mx_hotswap:
+                type: mx
+                nets:
+                    from: '=colrow'
+                    to: '=colnet'
+                params:
+                    reverse: true
+                    hotswap: true
+                    keycaps: false
+            diode:
+                type: diode
+                nets:
+                    from: '=colrow'
+                    to: '=rownet'
+                anchor:
+                    shift:
+                        - 0
+                        - -5
+        colnet: COL_Indx
+        rownet: ROW_Bot
+        name: matrix_index_bottom
+        colrow: index_bottom
+        col: &ref_3
+            stagger: -8.5725
+            key:
+                colnet: COL_Indx
+            spread: 19
+            rotate: 0
+            origin:
+                - 0
+                - 0
+            rows: {}
+            name: index
+        row: bottom
+matrix_index_home:
+    x: 56.0860318
+    'y': 38.933314100000004
+    r: 0
+    meta:
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        padding: 19.05
+        width: 1
+        height: 1
+        skip: false
+        asym: both
+        footprints:
+            mx_hotswap:
+                type: mx
+                nets:
+                    from: '=colrow'
+                    to: '=colnet'
+                params:
+                    reverse: true
+                    hotswap: true
+                    keycaps: false
+            diode:
+                type: diode
+                nets:
+                    from: '=colrow'
+                    to: '=rownet'
+                anchor:
+                    shift:
+                        - 0
+                        - -5
+        colnet: COL_Indx
+        rownet: ROW_Home
+        name: matrix_index_home
+        colrow: index_home
+        col: *ref_3
+        row: home
+matrix_index_top:
+    x: 56.0860318
+    'y': 57.9833141
+    r: 0
+    meta:
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        padding: 19.05
+        width: 1
+        height: 1
+        skip: false
+        asym: both
+        footprints:
+            mx_hotswap:
+                type: mx
+                nets:
+                    from: '=colrow'
+                    to: '=colnet'
+                params:
+                    reverse: true
+                    hotswap: true
+                    keycaps: false
+            diode:
+                type: diode
+                nets:
+                    from: '=colrow'
+                    to: '=rownet'
+                anchor:
+                    shift:
+                        - 0
+                        - -5
+        colnet: COL_Indx
+        rownet: ROW_Top
+        name: matrix_index_top
+        colrow: index_top
+        col: *ref_3
+        row: top
+matrix_inner_bottom:
+    x: 75.0860317
+    'y': 16.0733141
+    r: 0
+    meta:
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        padding: 19.05
+        width: 1
+        height: 1
+        skip: false
+        asym: both
+        footprints:
+            mx_hotswap:
+                type: mx
+                nets:
+                    from: '=colrow'
+                    to: '=colnet'
+                params:
+                    reverse: true
+                    hotswap: true
+                    keycaps: false
+            diode:
+                type: diode
+                nets:
+                    from: '=colrow'
+                    to: '=rownet'
+                anchor:
+                    shift:
+                        - 0
+                        - -5
+        colnet: COL_Innr
+        bind:
+            - 0
+            - 1.23U
+            - 0.85U
+            - 0
+        rownet: ROW_Bot
+        name: matrix_inner_bottom
+        colrow: inner_bottom
+        col: &ref_4
+            stagger: -3.8100000000000005
+            key:
+                colnet: COL_Innr
+                bind:
+                    - 0
+                    - 1.23U
+                    - 0.85U
+                    - 0
+            spread: 19
+            rotate: 0
+            origin:
+                - 0
+                - 0
+            rows: {}
+            name: inner
+        row: bottom
+matrix_inner_home:
+    x: 75.0860317
+    'y': 35.1233141
+    r: 0
+    meta:
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        padding: 19.05
+        width: 1
+        height: 1
+        skip: false
+        asym: both
+        footprints:
+            mx_hotswap:
+                type: mx
+                nets:
+                    from: '=colrow'
+                    to: '=colnet'
+                params:
+                    reverse: true
+                    hotswap: true
+                    keycaps: false
+            diode:
+                type: diode
+                nets:
+                    from: '=colrow'
+                    to: '=rownet'
+                anchor:
+                    shift:
+                        - 0
+                        - -5
+        colnet: COL_Innr
+        bind:
+            - 0
+            - 1.23U
+            - 0.85U
+            - 0
+        rownet: ROW_Home
+        name: matrix_inner_home
+        colrow: inner_home
+        col: *ref_4
+        row: home
+matrix_inner_top:
+    x: 75.0860317
+    'y': 54.1733141
+    r: 0
+    meta:
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        padding: 19.05
+        width: 1
+        height: 1
+        skip: false
+        asym: both
+        footprints:
+            mx_hotswap:
+                type: mx
+                nets:
+                    from: '=colrow'
+                    to: '=colnet'
+                params:
+                    reverse: true
+                    hotswap: true
+                    keycaps: false
+            diode:
+                type: diode
+                nets:
+                    from: '=colrow'
+                    to: '=rownet'
+                anchor:
+                    shift:
+                        - 0
+                        - -5
+        colnet: COL_Innr
+        bind:
+            - 0
+            - 1.23U
+            - 0.85U
+            - 0
+        rownet: ROW_Top
+        name: matrix_inner_top
+        colrow: inner_top
+        col: *ref_4
+        row: top
+thumb_tucky:
+    x: 56.0860318
+    'y': -2.6166859000000002
+    r: -10
+    meta:
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        padding: 19
+        width: 1
+        height: 1
+        skip: false
+        asym: both
+        footprints:
+            mx_hotswap:
+                type: mx
+                nets:
+                    from: '=colrow'
+                    to: '=colnet'
+                params:
+                    reverse: true
+                    hotswap: true
+                    keycaps: false
+            diode:
+                type: diode
+                nets:
+                    from: '=colrow'
+                    to: '=rownet'
+                anchor:
+                    shift:
+                        - 0
+                        - -5
+        colnet: COL_Midd
+        name: thumb_tucky
+        rownet: ROW_Thumb
+        colrow: tucky_thumb_row
+        col:
+            key:
+                colnet: COL_Midd
+                name: thumb_tucky
+            stagger: 0
+            spread: 0
+            rotate: 0
+            origin:
+                - 0
+                - 0
+            rows: {}
+            name: tucky
+        row: thumb_row
+thumb_homey:
+    x: 75.90669059999999
+    'y': -7.8373852
+    r: -20
+    meta:
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        padding: 19
+        width: 1
+        height: 1
+        skip: false
+        asym: both
+        footprints:
+            mx_hotswap:
+                type: mx
+                nets:
+                    from: '=colrow'
+                    to: '=colnet'
+                params:
+                    reverse: true
+                    hotswap: true
+                    keycaps: false
+            diode:
+                type: diode
+                nets:
+                    from: '=colrow'
+                    to: '=rownet'
+                anchor:
+                    shift:
+                        - 0
+                        - -5
+        colnet: COL_Indx
+        name: thumb_homey
+        rownet: ROW_Thumb
+        colrow: homey_thumb_row
+        col:
+            rotate: -10
+            origin:
+                - -9
+                - -9
+            key:
+                colnet: COL_Indx
+                name: thumb_homey
+            stagger: 0
+            spread: 19
+            rows: {}
+            name: homey
+        row: thumb_row
+thumb_reachy:
+    x: 94.5196641
+    'y': -16.4205916
+    r: -30
+    meta:
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        padding: 19
+        width: 1
+        height: 1
+        skip: false
+        asym: both
+        footprints:
+            mx_hotswap:
+                type: mx
+                nets:
+                    from: '=colrow'
+                    to: '=colnet'
+                params:
+                    reverse: true
+                    hotswap: true
+                    keycaps: false
+            diode:
+                type: diode
+                nets:
+                    from: '=colrow'
+                    to: '=rownet'
+                anchor:
+                    shift:
+                        - 0
+                        - -5
+        colnet: COL_Innr
+        name: thumb_reachy
+        rownet: ROW_Thumb
+        colrow: reachy_thumb_row
+        col:
+            rotate: -10
+            origin:
+                - -9
+                - -9
+            key:
+                colnet: COL_Innr
+                name: thumb_reachy
+            stagger: 0
+            spread: 19
+            rows: {}
+            name: reachy
+        row: thumb_row

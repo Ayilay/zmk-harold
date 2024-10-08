@@ -1,0 +1,226 @@
+# Version 7
+#
+# Changes from previous version:
+#   - Use v5 as base, not v6
+#   - Change to Cherry footprints, not choc
+
+units:
+  cp: 13.85   # Cutout Plate for keycap
+  kc: 18.0    # KeyCap Dimensions (square)
+  ms: 0.45U
+  spr: cx+1
+
+points:
+  zones:
+    matrix:
+      columns:
+        pinky:
+          #rotate: 5
+          key.colnet: COL_Pink
+        ring:
+          rotate: -5
+          origin: [-0.5cx, -0.5cx]
+          stagger: 1U
+          spread: spr
+          key.colnet: COL_Ring
+        middle:
+          stagger: ms
+          key.colnet: COL_Midd
+        index:
+          stagger: -ms
+          key.colnet: COL_Indx
+        inner:
+          stagger: -0.2U
+          key:
+            colnet: COL_Innr
+            bind: [0, 1.23U, 0.85U, 0]
+      rows:
+        bottom:
+          padding: U
+          rownet: ROW_Bot
+        home:
+          padding: U
+          rownet: ROW_Home
+        top:
+          padding: U
+          rownet: ROW_Top
+    thumb:
+      anchor:
+        ref: matrix_index_bottom
+        shift: [0cx, -1.25cx]
+        rotate: -10
+      rows:
+        thumb_row.rownet: ROW_Thumb
+      columns:
+        tucky:
+          key:
+            colnet: COL_Midd
+            name: thumb_tucky
+        homey:
+          rotate: -10
+          origin: [-0.5cx, -0.5cx]
+          key:
+            colnet: COL_Indx
+            name: thumb_homey
+        reachy:
+          rotate: -10
+          origin: [-0.5cx, -0.5cx]
+          key:
+            colnet: COL_Innr
+            name: thumb_reachy
+
+  key:
+    footprints:
+      mx_hotswap:
+        type: mx
+        nets:
+          from: =colrow
+          to: =colnet
+        params:
+          reverse: true
+          hotswap: true
+          keycaps: false
+      diode:
+        type: diode
+        nets:
+          # from: P3
+          # to: P4
+          from: =colrow
+          to: =rownet
+        anchor:
+          shift: [0, -5]
+
+# Useful for 3D print plate prototype, won't be
+# used for actual fabrication output
+cases:
+  plate_extrude:
+    - type: outline 
+      name:  plate_final
+      extrude: 1.2
+
+
+outlines:
+  exports:
+    keycap_outlines:
+      - type: keys
+        side: left
+        size: kc
+        bound: false
+    switch_cutouts:
+      - type: keys
+        side: left
+        #color: red
+        size: cp
+        bound: false
+
+    bare_switch_outline:
+      - type: keys
+        side: left
+        size: [1.5cx,1.5cy]
+        corner: 1
+        bound: true
+
+    panel_outline:
+      - type: outline
+        name: bare_switch_outline
+
+      # Palm polygon  
+      - type: polygon
+        operation: add
+        points:
+          - ref: matrix_inner_bottom
+          - ref: thumb_tucky
+            shift: [-0.0u, -0.75cy]
+
+          - ref: matrix_pinky_bottom
+            shift: [0.75cy, -0.75cy]
+          - ref: matrix_pinky_bottom
+            shift: [-0u, -0.75cy]
+          - ref: matrix_pinky_home
+            shift: [-0u, -0u]
+
+
+      # ??? 
+      - type: polygon
+        operation: add
+        points:
+          - ref: matrix_inner_bottom
+            shift: [0.75cx, 0]
+          - ref: matrix_inner_bottom
+            shift: [0.75cx, -2cy]
+          - ref: matrix_inner_bottom
+            shift: [-0.5cx, -1cy]
+          - ref: matrix_inner_home
+            shift: [-0.5cx, -1cy]
+      
+      - type: polygon
+        operation: add
+        points:
+          - ref: thumb_homey
+            shift: [0cx, 0.75cy]
+          - ref: thumb_homey
+            shift: [0.75cx, 0.75cx]
+          - ref: thumb_reachy
+            shift: [0cx, 0.75cy]
+
+    
+    plate_final:
+      main:
+        type: outline
+        name: panel_outline
+      keyholes:
+        type: outline
+        name: switch_cutouts
+        operation: subtract
+
+    plate_debug:
+      main:
+        type: outline
+        name: panel_outline
+      keyholes:
+        type: outline
+        name: switch_cutouts
+        operation: stack
+
+pcbs:
+  mine:
+    outlines:
+      keycap_outlines_pcb:
+        outline: keycap_outlines
+        layer: Eco1.User
+      pcb_outline:
+        outline: panel_outline
+        layer: Edge.Cuts
+
+    footprints:
+      - type: trrs
+        anchor:
+          - ref: matrix_inner_top
+            shift: [1.5U, -1U]
+            rotate: -90
+        params:
+          #TODO fix reverse, it's buggy as fuck
+          #reverse: false
+          reverse: false
+
+        nets:
+          A: ROW_Top
+          B: GND
+          C: GND
+          D: test1
+
+      - type: xiao_ble
+        anchor:
+          - ref: matrix_inner_top
+            shift: [1.15U, 0]
+            rotate: 0
+        nets:
+          D0: COL_Pink
+          D1: COL_Ring
+          D2: COL_Midd
+          D3: COL_Indx
+          D4: COL_Innr
+          D5: ROW_Bot
+          D7: ROW_Home
+          D8: ROW_Top
+          D9: test1

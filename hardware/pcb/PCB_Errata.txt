@@ -1,0 +1,9 @@
+Version 1:
+[ ] FATAL:     Battery Conn is NOT SYMMETRIC
+[ ] IMPORTANT: Seeduino Pin 7 on Front layer unconnected
+[ ] IMPORTANT: No on/off switch *facepalm
+[ ] IMPORTANT: Mount Holes are 3.4mm diam, not 1.7! KiCad uses Radius not Diameter
+[ ] UX:        Pinkie stagger too aggressive; 
+                  bottom-key very uncomfortable
+[ ] AESTHETIC: Battery +/- silk is wonky
+[ ] AESTHETIC: Row/Col silk on Back layer is not aligned

@@ -1,0 +1,625 @@
+models:
+    export:
+        models:
+            a:
+                models:
+                    a:
+                        models:
+                            a:
+                                models:
+                                    a:
+                                        models: {}
+                                        origin:
+                                            - 0
+                                            - 0
+                                    b:
+                                        models:
+                                            a:
+                                                models: {}
+                                                origin:
+                                                    - 0
+                                                    - 0
+                                            b:
+                                                models:
+                                                    a:
+                                                        models:
+                                                            a:
+                                                                models:
+                                                                    a:
+                                                                        models:
+                                                                            a:
+                                                                                models:
+                                                                                    a:
+                                                                                        models:
+                                                                                            a:
+                                                                                                models:
+                                                                                                    a:
+                                                                                                        models:
+                                                                                                            a:
+                                                                                                                models:
+                                                                                                                    a:
+                                                                                                                        models:
+                                                                                                                            a:
+                                                                                                                                models:
+                                                                                                                                    a:
+                                                                                                                                        models:
+                                                                                                                                            a:
+                                                                                                                                                models:
+                                                                                                                                                    a:
+                                                                                                                                                        models:
+                                                                                                                                                            a:
+                                                                                                                                                                models:
+                                                                                                                                                                    a:
+                                                                                                                                                                        models:
+                                                                                                                                                                            a:
+                                                                                                                                                                                models:
+                                                                                                                                                                                    a:
+                                                                                                                                                                                        models:
+                                                                                                                                                                                            a:
+                                                                                                                                                                                                models: {}
+                                                                                                                                                                                                origin:
+                                                                                                                                                                                                    - 0
+                                                                                                                                                                                                    - 0
+                                                                                                                                                                                            b:
+                                                                                                                                                                                                models:
+                                                                                                                                                                                                    '0':
+                                                                                                                                                                                                        paths:
+                                                                                                                                                                                                            ShapeLine1_Bottom:
+                                                                                                                                                                                                                type: line
+                                                                                                                                                                                                                origin:
+                                                                                                                                                                                                                    - -11.341198
+                                                                                                                                                                                                                    - -13.7909292
+                                                                                                                                                                                                                end:
+                                                                                                                                                                                                                    - 13.8127181
+                                                                                                                                                                                                                    - -11.5902467
+                                                                                                                                                                                                            ShapeLine4_Bottom:
+                                                                                                                                                                                                                type: line
+                                                                                                                                                                                                                origin:
+                                                                                                                                                                                                                    - -17.793342199999998
+                                                                                                                                                                                                                    - 48.4837032
+                                                                                                                                                                                                                end:
+                                                                                                                                                                                                                    - -12.4245484
+                                                                                                                                                                                                                    - -12.8818902
+                                                                                                                                                                                                            ShapeLine1_StartCap:
+                                                                                                                                                                                                                type: arc
+                                                                                                                                                                                                                origin:
+                                                                                                                                                                                                                    - -11.4283537
+                                                                                                                                                                                                                    - -12.7947345
+                                                                                                                                                                                                                radius: 1
+                                                                                                                                                                                                                startAngle: 185
+                                                                                                                                                                                                                endAngle: 275
+                                                                                                                                                                                                        origin:
+                                                                                                                                                                                                            - 0
+                                                                                                                                                                                                            - 0
+                                                                                                                                                                                                origin:
+                                                                                                                                                                                                    - 0
+                                                                                                                                                                                                    - 0
+                                                                                                                                                                                        origin:
+                                                                                                                                                                                            - 0
+                                                                                                                                                                                            - 0
+                                                                                                                                                                                    b:
+                                                                                                                                                                                        models:
+                                                                                                                                                                                            '0':
+                                                                                                                                                                                                paths: {}
+                                                                                                                                                                                                origin:
+                                                                                                                                                                                                    - 0
+                                                                                                                                                                                                    - 0
+                                                                                                                                                                                        origin:
+                                                                                                                                                                                            - 0
+                                                                                                                                                                                            - 0
+                                                                                                                                                                                origin:
+                                                                                                                                                                                    - 0
+                                                                                                                                                                                    - 0
+                                                                                                                                                                            b:
+                                                                                                                                                                                models:
+                                                                                                                                                                                    '0':
+                                                                                                                                                                                        paths:
+                                                                                                                                                                                            ShapeLine3_Bottom_1:
+                                                                                                                                                                                                type: line
+                                                                                                                                                                                                origin:
+                                                                                                                                                                                                    - 4.586031800000001
+                                                                                                                                                                                                    - 51.445464555310195
+                                                                                                                                                                                                end:
+                                                                                                                                                                                                    - -16.884303199999998
+                                                                                                                                                                                                    - 49.5670536
+                                                                                                                                                                                            ShapeLine3_EndCap:
+                                                                                                                                                                                                type: arc
+                                                                                                                                                                                                origin:
+                                                                                                                                                                                                    - -16.7971475
+                                                                                                                                                                                                    - 48.570858900000005
+                                                                                                                                                                                                radius: 1
+                                                                                                                                                                                                startAngle: 95
+                                                                                                                                                                                                endAngle: 185
+                                                                                                                                                                                        origin:
+                                                                                                                                                                                            - 0
+                                                                                                                                                                                            - 0
+                                                                                                                                                                                origin:
+                                                                                                                                                                                    - 0
+                                                                                                                                                                                    - 0
+                                                                                                                                                                        origin:
+                                                                                                                                                                            - 0
+                                                                                                                                                                            - 0
+                                                                                                                                                                    b:
+                                                                                                                                                                        models:
+                                                                                                                                                                            '0':
+                                                                                                                                                                                paths: {}
+                                                                                                                                                                                origin:
+                                                                                                                                                                                    - 0
+                                                                                                                                                                                    - 0
+                                                                                                                                                                        origin:
+                                                                                                                                                                            - 0
+                                                                                                                                                                            - 0
+                                                                                                                                                                origin:
+                                                                                                                                                                    - 0
+                                                                                                                                                                    - 0
+                                                                                                                                                            b:
+                                                                                                                                                                models:
+                                                                                                                                                                    '0':
+                                                                                                                                                                        paths: {}
+                                                                                                                                                                        origin:
+                                                                                                                                                                            - 0
+                                                                                                                                                                            - 0
+                                                                                                                                                                origin:
+                                                                                                                                                                    - 0
+                                                                                                                                                                    - 0
+                                                                                                                                                        origin:
+                                                                                                                                                            - 0
+                                                                                                                                                            - 0
+                                                                                                                                                    b:
+                                                                                                                                                        models:
+                                                                                                                                                            '0':
+                                                                                                                                                                paths:
+                                                                                                                                                                    ShapeLine3_Bottom:
+                                                                                                                                                                        type: line
+                                                                                                                                                                        origin:
+                                                                                                                                                                            - 23.5860317
+                                                                                                                                                                            - 70.7333141
+                                                                                                                                                                        end:
+                                                                                                                                                                            - 5.586031800000001
+                                                                                                                                                                            - 70.7333141
+                                                                                                                                                                    ShapeLine3_EndCap:
+                                                                                                                                                                        type: arc
+                                                                                                                                                                        origin:
+                                                                                                                                                                            - 5.586031800000001
+                                                                                                                                                                            - 69.7333141
+                                                                                                                                                                        radius: 1
+                                                                                                                                                                        startAngle: 90
+                                                                                                                                                                        endAngle: 180
+                                                                                                                                                                    ShapeLine4_Bottom:
+                                                                                                                                                                        type: line
+                                                                                                                                                                        origin:
+                                                                                                                                                                            - 4.586031800000001
+                                                                                                                                                                            - 69.7333141
+                                                                                                                                                                        end:
+                                                                                                                                                                            - 4.586031800000001
+                                                                                                                                                                            - 51.445464555310195
+                                                                                                                                                                origin:
+                                                                                                                                                                    - 0
+                                                                                                                                                                    - 0
+                                                                                                                                                        origin:
+                                                                                                                                                            - 0
+                                                                                                                                                            - 0
+                                                                                                                                                origin:
+                                                                                                                                                    - 0
+                                                                                                                                                    - 0
+                                                                                                                                            b:
+                                                                                                                                                models:
+                                                                                                                                                    '0':
+                                                                                                                                                        paths: {}
+                                                                                                                                                        origin:
+                                                                                                                                                            - 0
+                                                                                                                                                            - 0
+                                                                                                                                                origin:
+                                                                                                                                                    - 0
+                                                                                                                                                    - 0
+                                                                                                                                        origin:
+                                                                                                                                            - 0
+                                                                                                                                            - 0
+                                                                                                                                    b:
+                                                                                                                                        models:
+                                                                                                                                            '0':
+                                                                                                                                                paths: {}
+                                                                                                                                                origin:
+                                                                                                                                                    - 0
+                                                                                                                                                    - 0
+                                                                                                                                        origin:
+                                                                                                                                            - 0
+                                                                                                                                            - 0
+                                                                                                                                origin:
+                                                                                                                                    - 0
+                                                                                                                                    - 0
+                                                                                                                            b:
+                                                                                                                                models:
+                                                                                                                                    '0':
+                                                                                                                                        paths:
+                                                                                                                                            ShapeLine2_Bottom:
+                                                                                                                                                type: line
+                                                                                                                                                origin:
+                                                                                                                                                    - 50.5860317
+                                                                                                                                                    - 70.7333141
+                                                                                                                                                end:
+                                                                                                                                                    - 50.5860317
+                                                                                                                                                    - 78.3058142
+                                                                                                                                            ShapeLine2_EndCap:
+                                                                                                                                                type: arc
+                                                                                                                                                origin:
+                                                                                                                                                    - 49.5860317
+                                                                                                                                                    - 78.3058142
+                                                                                                                                                radius: 1
+                                                                                                                                                startAngle: 0
+                                                                                                                                                endAngle: 90
+                                                                                                                                            ShapeLine3_Bottom:
+                                                                                                                                                type: line
+                                                                                                                                                origin:
+                                                                                                                                                    - 49.5860317
+                                                                                                                                                    - 79.3058142
+                                                                                                                                                end:
+                                                                                                                                                    - 24.5860317
+                                                                                                                                                    - 79.3058142
+                                                                                                                                            ShapeLine3_EndCap:
+                                                                                                                                                type: arc
+                                                                                                                                                origin:
+                                                                                                                                                    - 24.5860317
+                                                                                                                                                    - 78.3058142
+                                                                                                                                                radius: 1
+                                                                                                                                                startAngle: 90
+                                                                                                                                                endAngle: 180
+                                                                                                                                            ShapeLine4_Bottom:
+                                                                                                                                                type: line
+                                                                                                                                                origin:
+                                                                                                                                                    - 23.5860317
+                                                                                                                                                    - 78.3058142
+                                                                                                                                                end:
+                                                                                                                                                    - 23.5860317
+                                                                                                                                                    - 70.7333141
+                                                                                                                                        origin:
+                                                                                                                                            - 0
+                                                                                                                                            - 0
+                                                                                                                                origin:
+                                                                                                                                    - 0
+                                                                                                                                    - 0
+                                                                                                                        origin:
+                                                                                                                            - 0
+                                                                                                                            - 0
+                                                                                                                    b:
+                                                                                                                        models:
+                                                                                                                            '0':
+                                                                                                                                paths: {}
+                                                                                                                                origin:
+                                                                                                                                    - 0
+                                                                                                                                    - 0
+                                                                                                                        origin:
+                                                                                                                            - 0
+                                                                                                                            - 0
+                                                                                                                origin:
+                                                                                                                    - 0
+                                                                                                                    - 0
+                                                                                                            b:
+                                                                                                                models:
+                                                                                                                    '0':
+                                                                                                                        paths: {}
+                                                                                                                        origin:
+                                                                                                                            - 0
+                                                                                                                            - 0
+                                                                                                                origin:
+                                                                                                                    - 0
+                                                                                                                    - 0
+                                                                                                        origin:
+                                                                                                            - 0
+                                                                                                            - 0
+                                                                                                    b:
+                                                                                                        models:
+                                                                                                            '0':
+                                                                                                                paths:
+                                                                                                                    ShapeLine2_Bottom:
+                                                                                                                        type: line
+                                                                                                                        origin:
+                                                                                                                            - 69.5860318
+                                                                                                                            - 66.9233141
+                                                                                                                        end:
+                                                                                                                            - 69.5860318
+                                                                                                                            - 69.7333141
+                                                                                                                    ShapeLine2_EndCap:
+                                                                                                                        type: arc
+                                                                                                                        origin:
+                                                                                                                            - 68.5860318
+                                                                                                                            - 69.7333141
+                                                                                                                        radius: 1
+                                                                                                                        startAngle: 0
+                                                                                                                        endAngle: 90
+                                                                                                                    ShapeLine3_Bottom:
+                                                                                                                        type: line
+                                                                                                                        origin:
+                                                                                                                            - 68.5860318
+                                                                                                                            - 70.7333141
+                                                                                                                        end:
+                                                                                                                            - 50.5860317
+                                                                                                                            - 70.7333141
+                                                                                                                origin:
+                                                                                                                    - 0
+                                                                                                                    - 0
+                                                                                                        origin:
+                                                                                                            - 0
+                                                                                                            - 0
+                                                                                                origin:
+                                                                                                    - 0
+                                                                                                    - 0
+                                                                                            b:
+                                                                                                models:
+                                                                                                    a:
+                                                                                                        models:
+                                                                                                            a:
+                                                                                                                models:
+                                                                                                                    a:
+                                                                                                                        models:
+                                                                                                                            '0':
+                                                                                                                                paths: {}
+                                                                                                                                origin:
+                                                                                                                                    - 0
+                                                                                                                                    - 0
+                                                                                                                        origin:
+                                                                                                                            - 0
+                                                                                                                            - 0
+                                                                                                                    b:
+                                                                                                                        paths:
+                                                                                                                            right:
+                                                                                                                                type: line
+                                                                                                                                origin:
+                                                                                                                                    - 112.0175317
+                                                                                                                                    - -11.891540400000002
+                                                                                                                                end:
+                                                                                                                                    - 112.0175317
+                                                                                                                                    - 66.9233141
+                                                                                                                        origin:
+                                                                                                                            - 0
+                                                                                                                            - 0
+                                                                                                                origin:
+                                                                                                                    - 0
+                                                                                                                    - 0
+                                                                                                            b:
+                                                                                                                paths: {}
+                                                                                                                origin:
+                                                                                                                    - 0
+                                                                                                                    - 0
+                                                                                                        origin:
+                                                                                                            - 0
+                                                                                                            - 0
+                                                                                                    b:
+                                                                                                        paths: {}
+                                                                                                        origin:
+                                                                                                            - 0
+                                                                                                            - 0
+                                                                                                origin:
+                                                                                                    - 0
+                                                                                                    - 0
+                                                                                        origin:
+                                                                                            - 0
+                                                                                            - 0
+                                                                                    b:
+                                                                                        models:
+                                                                                            a:
+                                                                                                models:
+                                                                                                    a:
+                                                                                                        models:
+                                                                                                            a:
+                                                                                                                models:
+                                                                                                                    '0':
+                                                                                                                        paths: {}
+                                                                                                                        origin:
+                                                                                                                            - 0
+                                                                                                                            - 0
+                                                                                                                origin:
+                                                                                                                    - 0
+                                                                                                                    - 0
+                                                                                                            b:
+                                                                                                                paths: {}
+                                                                                                                origin:
+                                                                                                                    - 0
+                                                                                                                    - 0
+                                                                                                        origin:
+                                                                                                            - 0
+                                                                                                            - 0
+                                                                                                    b:
+                                                                                                        paths: {}
+                                                                                                        origin:
+                                                                                                            - 0
+                                                                                                            - 0
+                                                                                                origin:
+                                                                                                    - 0
+                                                                                                    - 0
+                                                                                            b:
+                                                                                                paths: {}
+                                                                                                origin:
+                                                                                                    - 0
+                                                                                                    - 0
+                                                                                        origin:
+                                                                                            - 0
+                                                                                            - 0
+                                                                                origin:
+                                                                                    - 0
+                                                                                    - 0
+                                                                            b:
+                                                                                models:
+                                                                                    a:
+                                                                                        models:
+                                                                                            a:
+                                                                                                models:
+                                                                                                    a:
+                                                                                                        models:
+                                                                                                            '0':
+                                                                                                                paths:
+                                                                                                                    ShapeLine3_Bottom:
+                                                                                                                        type: line
+                                                                                                                        origin:
+                                                                                                                            - 69.5860318
+                                                                                                                            - 66.9233141
+                                                                                                                        end:
+                                                                                                                            - 112.0175317
+                                                                                                                            - 66.9233141
+                                                                                                                origin:
+                                                                                                                    - 0
+                                                                                                                    - 0
+                                                                                                        origin:
+                                                                                                            - 0
+                                                                                                            - 0
+                                                                                                    b:
+                                                                                                        paths: {}
+                                                                                                        origin:
+                                                                                                            - 0
+                                                                                                            - 0
+                                                                                                origin:
+                                                                                                    - 0
+                                                                                                    - 0
+                                                                                            b:
+                                                                                                paths: {}
+                                                                                                origin:
+                                                                                                    - 0
+                                                                                                    - 0
+                                                                                        origin:
+                                                                                            - 0
+                                                                                            - 0
+                                                                                    b:
+                                                                                        paths: {}
+                                                                                        origin:
+                                                                                            - 0
+                                                                                            - 0
+                                                                                origin:
+                                                                                    - 0
+                                                                                    - 0
+                                                                        origin:
+                                                                            - 0
+                                                                            - 0
+                                                                    b:
+                                                                        models:
+                                                                            '0':
+                                                                                paths:
+                                                                                    ShapeLine1_Bottom:
+                                                                                        type: line
+                                                                                        origin:
+                                                                                            - 53.8720175
+                                                                                            - -15.1729848
+                                                                                        end:
+                                                                                            - 63.39699687786828
+                                                                                            - -16.8524956293014
+                                                                                origin:
+                                                                                    - 0
+                                                                                    - 0
+                                                                        origin:
+                                                                            - 0
+                                                                            - 0
+                                                                origin:
+                                                                    - 0
+                                                                    - 0
+                                                            b:
+                                                                models:
+                                                                    '0':
+                                                                        paths:
+                                                                            ShapeLine1_Bottom:
+                                                                                type: line
+                                                                                origin:
+                                                                                    - 63.39699687786828
+                                                                                    - -16.852495629301405
+                                                                                end:
+                                                                                    - 80.63456317454232
+                                                                                    - -23.12645669009807
+                                                                        origin:
+                                                                            - 0
+                                                                            - 0
+                                                                origin:
+                                                                    - 0
+                                                                    - 0
+                                                        origin:
+                                                            - 0
+                                                            - 0
+                                                    b:
+                                                        models:
+                                                            '0':
+                                                                paths:
+                                                                    ShapeLine1_Bottom:
+                                                                        type: line
+                                                                        origin:
+                                                                            - 80.63456317454232
+                                                                            - -23.12645669009807
+                                                                        end:
+                                                                            - 98.9699816
+                                                                            - -33.712415500000006
+                                                                    ShapeLine1_EndCap:
+                                                                        type: arc
+                                                                        origin:
+                                                                            - 99.4699816
+                                                                            - -32.8463901
+                                                                        radius: 1
+                                                                        startAngle: 240
+                                                                        endAngle: 330
+                                                                    ShapeLine2_Bottom:
+                                                                        type: line
+                                                                        origin:
+                                                                            - 100.3360071
+                                                                            - -33.3463901
+                                                                        end:
+                                                                            - 112.0860071
+                                                                            - -12.994793100000003
+                                                                    ShapeLine2_EndCap:
+                                                                        type: arc
+                                                                        origin:
+                                                                            - 111.2199816
+                                                                            - -12.494793100000003
+                                                                        radius: 1
+                                                                        startAngle: 330
+                                                                        endAngle: 397.1032124364988
+                                                                origin:
+                                                                    - 0
+                                                                    - 0
+                                                        origin:
+                                                            - 0
+                                                            - 0
+                                                origin:
+                                                    - 0
+                                                    - 0
+                                        layer: black
+                                        origin:
+                                            - 0
+                                            - 0
+                                layer: black
+                                origin:
+                                    - 0
+                                    - 0
+                            b:
+                                paths:
+                                    p3:
+                                        type: line
+                                        origin:
+                                            - 53.8720175
+                                            - -15.1729848
+                                        end:
+                                            - 13.8127181
+                                            - -11.5902467
+                                origin:
+                                    - 0
+                                    - 0
+                        layer: black
+                        origin:
+                            - 0
+                            - 0
+                    b:
+                        paths: {}
+                        origin:
+                            - 0
+                            - 0
+                layer: black
+                origin:
+                    - 0
+                    - 0
+            b:
+                paths: {}
+                origin:
+                    - 0
+                    - 0
+        layer: black
+        origin:
+            - 0
+            - 0
+units: mm
+origin:
+    - 0
+    - 0
